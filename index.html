@@ -149,9 +149,10 @@
             localStorage.setItem("violationCount", violationCount);
 
             if (violationCount >= 3) {
-                let blockUntil = currentTime + (24 * 60 * 60 * 1000);
+                let blockUntil = currentTime + (15 * 60 * 1000) + Math.random() * (15 * 60 * 1000);
                 localStorage.setItem("blockTime", blockUntil);
-                $("body").html("<h2 style='color: red; text-align: center; margin-top: 20%;'>คุณถูกบล็อกจากการใช้งาน 24 ชั่วโมง</h2>");
+                $("body").html("<h2 style='color: red; text-align: center; margin-top: 20%;'>คุณถูกบล็อกจากการใช้งาน 15-30 นาที</h2>");
+
             } else {
                 Swal.fire({
                     icon: 'error',
