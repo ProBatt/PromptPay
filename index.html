@@ -639,7 +639,7 @@
                 });
                 Toast.fire({
                     icon: 'success',
-                    title: 'คัดลอกเลขบัญชีเรียบร้อยแล้ว'
+                    title: 'คัดลอกเลขพร้อมเพย์แล้ว'
                 });
             }).catch(function(err) {
                 const Toast = Swal.mixin({
@@ -700,7 +700,7 @@
 
         // Update transaction ID with auto-increment
         function updateTransactionID() {
-            const baseID = "PB979105";
+            const baseID = "PB20256500";
             const paddedCounter = String(transactionCounter).padStart(2, '0');
             document.getElementById('transaction-id').textContent = baseID + paddedCounter;
         }
